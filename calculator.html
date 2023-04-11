@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Plutus </title>
+
+    <meta name="author" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="CSS/chart.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/navbar.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/calculator.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="plutus.jpg">
+  </head>
+
+  <body>
+
+    <header>
+      <div class="btn hidden">
+        <button id="connect-btn">
+          Connect Wallet
+        </button>
+      </div>
+      <div class="menu-responsive">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </header>
+
+    <nav class="">
+      <ul>
+        <li><a href="index.html" style="font-size: calc(20 * var(--res))" ><img src="SVG/home.svg" alt="Dashboard">Dashboard</a></li>
+        <li><a href="account.html" style="font-size: calc(20 * var(--res))"><img src="SVG/user.svg" alt="Account">Account</a></li>
+        <li><a href="calculator.html" style="font-size: calc(20 * var(--res))"><img src="SVG/calculator.svg" alt="Calculator">Calculator</a></li>
+        <li><a href="https://app.mute.io/swap" style="font-size: calc(20 * var(--res))"><img src="SVG/building-bank.svg" alt="Presale">Swap</a></li>
+        <li><a href="https://dexscreener.com/zksync/" style="font-size: calc(20 * var(--res))"><img src="SVG/chart-line.svg" alt="Chart">Chart</a></li>
+    </ul>
+    </nav>
+
+    <section class="nav-toggle">
+      <i class="fa-regular fa-circle-xmark"></i>
+      <div class="list-nav-container">
+          <img class="logo" src="SVG/logo.svg" alt="">
+          <ul>
+              <li><a href="index.html"><img src="SVG/home.svg" alt="Dashboard">Dashboard</a></li>
+              <li><a href="account.html"><img src="SVG/user.svg" alt="Account">Account</a></li>
+              <li><a href="calculator.html"><img src="SVG/calculator.svg" alt="Calculator">Calculator</a></li>
+              <li><a href=""><img src="SVG/building-bank.svg" alt="Presale">Swap</a></li>
+              <li><a href=""><img src="SVG/chart-line.svg" alt="Chart">Chart</a></li>
+          </ul>
+      </div>
+  </section>
+
+    <!-- CONTAINER -->
+    <main class="all-card-container">
+      <div class="title">
+        <h1>Totalizer</h1>
+      </div>
+      <!-- TOP CARD -->
+      <div class="card-top-reward">
+        <div class="cardos">
+          <div class="info">
+            <h2>Next Epoch Yield</h2>
+            <h3>0.037%</h3>
+          </div>
+        </div>
+        <div class="cardos">
+          <div class="info">
+            <h2>Next Reward Value</h2>
+            <h3>$0</h3>
+          </div>
+        </div>
+        <div class="cardos">
+          <div class="info">
+            <h2>Your Earnings/5 Days</h2>
+            <h3>0 ($0)</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- MIDDLE GRID -->
+      <section class="grid-middle-container">
+            <div class="input-middle-grid">
+                <h3>Plutus Amount</h3>
+                <input type="number" placeholder="0" id="amount">
+            </div>
+            <div class="input-middle-grid">
+                <h3>APY (%)</h3>
+                <input type="number" placeholder="18,422%" value="200,00" disabled="">
+            </div>
+            <div class="input-middle-grid">
+                <h3>Price at purchase ($)</h3>
+                <input type="number" placeholder="0" id="price-purchase">
+            </div>
+
+            <div class="input-middle-grid">
+                <h3>Future Plutus price ($)</h3>
+                <input type="number" placeholder="0" id="future-price">
+            </div>
+        </section>
+
+      <div class="range-container">
+            <div class="rat">
+              <span id="rangeValue">0 days</span>
+              <input type="range" class="range" name="" value="0" min="0" max="365" oninput="rangeSlide(this.value)">
+            </div>
+            <script type="text/javascript">
+              function rangeSlide(value) {
+                requestAnimationFrame(() => {
+                  document.getElementById("rangeValue").innerHTML = value + " days";
+                });
+                }
+            </script>
+      </div>
+
+      <table>
+            <tr>
+                <td><h4>Your initial investment</h4></td>
+                <td><p id="initial-investment">$0.00</p></td>
+            </tr>
+            <tr>
+                <td><h4>Current Wealth</h4></td>
+                <td><p>$0.00</p></td>
+            </tr>
+            <tr>
+                <td><h4>Plutus rewards estimation</h4></td>
+                <td><p id="display-amount">0.00 Plutus</p></td>
+            </tr>
+            <tr>
+                <td><h4>Potential return</h4></td>
+                <td><p id="potential-return">$0.00</p></td>
+            </tr>
+        </table>
+    </main>
+
+
+
+
+    <script src="js/calculator.js"></script>
+
+    <script src="f29a6c4890.js" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+    <script src="js/web3.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  </body>
+</html>

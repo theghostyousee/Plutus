@@ -1,0 +1,162 @@
+
+@import url('https://fonts.googleapis.com/css2?family=GFS+Neohellenic:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+
+  font-family: 'GFS Neohellenic', sans-serif;
+  background: #E5D6C3;
+  filter: invert(0%) sepia(100%) saturate(23%) hue-rotate(41deg) brightness(94%) contrast(105%);
+  /* background: url("../IMG/.svg") no-repeat center/cover; */
+  overflow: hidden;
+}
+/* ########################################## */
+/* ########################################## */
+/* ########################################## */
+.card{
+  transition: 0.3s;
+}
+
+/* ########################################## */
+/* ########################################## */
+/* ########################################## */
+.social {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 20px;
+}
+.social ul {
+  display: flex;
+  gap: 10px;
+}
+.social ul li a img {
+  width: calc(30 * var(--res));
+}
+.social ul li a:hover img{
+  transform: scale(1.2);
+}
+
+/* ########################################## */
+/* ########################################## */
+/* ########################################## */
+.all-card-container{
+  position: absolute;
+  height: 60%;
+  width: 80%;
+  top: 55%;
+  right: 45%;
+  transform: translate(50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* border: 1px solid red; */
+  gap: 20px;
+}
+.all-card-container .info{
+  text-align: center;
+}
+.all-card-container h2{
+  color: #4ECAE2; 
+  font-size: calc(15 * var(--res));
+}
+.all-card-container h3{
+  color: #D0DCE8;
+  font-size: calc(22 * var(--res));
+}
+
+/* LONG CARD */
+.all-card-container .long-card-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  height: 20%;
+  background-color: #1b1a2bc4;
+  border: 1px solid rgba(19,207,207,.067);
+  border-radius: 4px;
+  box-shadow: 10px 60px 200px rgb(0 0 0 / 35%);
+  transition: all 0.4s;
+}
+
+/* MIDDLE CARD */
+.card-middle-container{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  height: 20%;
+}
+
+.card-middle-container .card-middle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 47.5%;
+  height: 100%;
+  background-color: #1b1a2bc4;
+  border: 1px solid rgba(19,207,207,.067);
+  border-radius: 4px;
+  box-shadow: 10px 60px 200px rgb(0 0 0 / 35%);
+}
+
+/* BOTTOM CARD */
+.card-bottom-container{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  height: 20%;
+}
+
+.card-bottom-container .card-bottom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  background-color: #1b1a2bc4;
+  border: 1px solid rgba(19,207,207,.067);
+  border-radius: 4px;
+  box-shadow: 10px 60px 200px rgb(0 0 0 / 35%);
+}
+
+@media screen and (max-width: 800px){
+  .all-card-container{
+      width: 100%;
+      right: 50%;
+  }
+  .social {
+    display: none;
+  }
+}
+@media screen and (max-height:599px){
+  .all-card-container{
+      width: 100%;
+      right: 50%;
+  }
+  .social {
+    display: none;
+  }
+}
+
+/* ########################################## */
+/* ########################################## */
+/* ########################################## */
+:root {
+  --res: calc(0.1 * 1vmin);
+}
+
+.hidden {
+  display: none;
+}

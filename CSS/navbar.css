@@ -1,0 +1,235 @@
+/* NAVBAR */
+
+
+nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  width: 15%;
+  height: 100vh;
+  justify-content: center;
+  background-color: #171a1da4;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+nav ul li {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+nav ul li a {
+  display: flex;
+  border: 1px solid red;
+  border-radius: 4px;
+  width: 100%;
+  padding: 10px 20px;
+  align-items: center;
+  gap: 10px;
+  color: rgba(247, 247, 247, 0.578);
+  font-size: calc(30 * var(--res));
+  position: relative;
+  font-size: 1.9rem;
+  font-weight: 300;
+}
+
+nav ul li a:hover {
+  background-color: red;
+}
+
+nav ul li a img {
+  width: calc(30 * var(--res));
+  filter: invert(92%) sepia(94%) saturate(34%) hue-rotate(195deg) brightness(107%) contrast(100%);
+  
+ 
+}
+
+
+
+/* ########################################## */
+/* ########################################## */
+/* ########################################## */
+/* NAVBAR TOGGLE */
+.nav-toggle {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  height: 100vh;
+  left: -150%;
+  top: 50%;
+  width: 100%;
+  background-color: #000000;
+  transform: translateY(-50%);
+  transition: 0.5s;
+  z-index: 10;
+}
+/* CLOSE BTN */
+.nav-toggle .fa-circle-xmark {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+.nav-toggle .list-nav-container {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+/* BUTTON */
+.nav-toggle .btn-navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 15%;
+  width: 80%;
+
+}
+
+.nav-toggle .logo{
+  width: calc(250 * var(--res));
+}
+
+.nav-toggle .btn-navbar button img {
+  width: calc(22 * var(--res));
+}
+
+.nav-toggle .btn-navbar button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 47.5%;
+  width: 80%;
+  gap: 10px;
+  background: #ffffff;
+  border-radius: 20px;
+  color: #1a987e;
+  font-size: calc(18 * var(--res));
+  cursor: pointer;
+  z-index: 9;
+  outline: none;
+  border: 1px solid #1a987e;
+  transition: 0.2s;
+}
+.nav-toggle .btn-navbar button:hover{
+  transform: scale(1.1);
+}
+
+.social ul li{
+  border: 1px solid rgba(255, 255, 255, 0.498);
+  padding: 8px;
+  border-radius:50%;
+
+}
+/* .nav-toggle #buy-btn {
+}
+.nav-toggle #connect-btn {
+} */
+
+/* LIST */
+.nav-toggle .list-nav-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.nav-toggle .list-nav-container ul li {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.nav-toggle .list-nav-container ul li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: calc(40 * var(--res));
+  position: relative;
+}
+.nav-toggle .list-nav-container ul li a img {
+  width: calc(40 * var(--res));
+  color: white;
+}
+.nav-toggle .list-nav-container ul li a::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  border-radius: 0 2px 2px 0;
+  background-color: #ffffffb2;
+  top: 100%;
+  transform: translateY(-50%);
+  transition: 0.2s ease-out;
+}
+.nav-toggle .list-nav-container ul li:hover a::before {
+  width: 100%;
+  transition: 0.2s ease-out;
+}
+
+/* LINKS */
+.nav-toggle .social-links{
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.nav-toggle .social-links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.nav-toggle .social-links ul li {
+  display: flex;
+  align-items: center;
+}
+.nav-toggle .social-links ul li a {
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.414);
+  font-size: calc(30 * var(--res));
+  gap: 5px;
+  position: relative;
+}
+.nav-toggle .social-links ul li a::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  border-radius: 0 2px 2px 0;
+  background-color: #fff;
+  top: 100%;
+  transform: translateY(-50%);
+  transition: 0.2s ease-out;
+}
+.nav-toggle .social-links ul li:hover a::before {
+  width: 100%;
+  transition: 0.2s ease-out;
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    display: none;
+  }
+}
+@media screen and (max-height: 599px) {
+  nav {
+    display: none;
+  }
+}
+
